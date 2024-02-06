@@ -1,7 +1,6 @@
 Flask
 Gunicorn
 faker
-re
 random
 json
 httpx
