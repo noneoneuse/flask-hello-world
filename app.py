@@ -140,11 +140,9 @@ payload = {
 }
 
 # Make the request
-with httpx.Client() as client:
-    response = client.post(url, headers=headers, json=payload)
-
-
-    return jsonify({"response": response})
+    with httpx.Client() as client:
+        response = client.post(url, headers=headers, json=payload)
+        return jsonify(response.json()) 
 
 if __name__ == '__main__':
     app.run(debug=True)
